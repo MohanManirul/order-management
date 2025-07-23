@@ -13,8 +13,13 @@ use App\Http\Middleware\AdminMiddleware;
 use App\Http\Middleware\SessionAuthenticateMiddleware;
 use App\Http\Middleware\SuperAdminMiddleware;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Artisan;
 
+Route::get('/clear', function () {
+    Artisan::call('optimize:clear');
 
+    return '✅ All cache cleared!';
+});
 
 // ================== User Routes ==================
 

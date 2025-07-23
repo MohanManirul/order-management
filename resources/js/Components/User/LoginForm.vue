@@ -6,8 +6,8 @@ const toaster = createToaster({ });
 
 const page = usePage();
 const form = useForm({
-    email: '',
-    password: '',
+    email: 'superadmin@gmail.com',
+    password: '12345678',
 })
 
 function submitForm() {
